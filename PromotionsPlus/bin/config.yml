@@ -1,0 +1,9 @@
+ui_title: '&c&lPromotions'
+
+item: oak_plank
+item_amount: 1
+item_slot: 2
+item_title: '&aConfig item!'
+item_lore_line_one: '&7Config lore numbers uno'
+item_lore_line_two: '&4Config lore number due'
+  

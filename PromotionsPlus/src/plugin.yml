@@ -1,0 +1,10 @@
+name: PromotionsPlus
+version: 2.0
+author: GrayoneJr
+main: com.civitasmc.promotionsplus.Main
+description: PromotionsPlus - A promotion plugin!
+
+commands:
+  promotions:
+   aliases: [promo]
+   description: Open the Promotions GUI.
