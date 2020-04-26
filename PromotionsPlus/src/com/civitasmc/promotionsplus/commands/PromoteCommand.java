@@ -6,16 +6,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.civitasmc.promotionsplus.Main;
-import com.civitasmc.promotionsplus.ui.TestUi;
+import com.civitasmc.promotionsplus.ui.PromoteSettingsUi;
 
-public class PromotionsCommand implements CommandExecutor {
+public class PromoteCommand implements CommandExecutor {
 	
 	@SuppressWarnings("unused")
 	private Main plugin;
-	public PromotionsCommand(Main plugin) {
+	public PromoteCommand(Main plugin) {
 		this.plugin = plugin;
 		
-		plugin.getCommand("promotionsboard").setExecutor(this);
+		plugin.getCommand("promote").setExecutor(this);
 	}
 	
 	@Override
@@ -27,7 +27,7 @@ public class PromotionsCommand implements CommandExecutor {
 		
 		Player p = (Player) sender;
 		if (p.hasPermission("promotionsplus.command.gui.open")) {
-			p.openInventory(TestUi.GUI(p));
+			p.openInventory(PromoteSettingsUi.GUI(p));
 		}
 		
 		return false;

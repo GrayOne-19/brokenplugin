@@ -6,16 +6,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.civitasmc.promotionsplus.Main;
-import com.civitasmc.promotionsplus.ui.TestUi;
+import com.civitasmc.promotionsplus.utils.Utils;
 
-public class PromotionsCommand implements CommandExecutor {
+
+public class ReloadCommand implements CommandExecutor {
 	
-	@SuppressWarnings("unused")
 	private Main plugin;
-	public PromotionsCommand(Main plugin) {
+	public ReloadCommand(Main plugin) {
 		this.plugin = plugin;
 		
-		plugin.getCommand("promotionsboard").setExecutor(this);
+		plugin.getCommand("ppreload").setExecutor(this);
 	}
 	
 	@Override
@@ -27,10 +27,15 @@ public class PromotionsCommand implements CommandExecutor {
 		
 		Player p = (Player) sender;
 		if (p.hasPermission("promotionsplus.command.gui.open")) {
-			p.openInventory(TestUi.GUI(p));
+			plugin.getPluginLoader().disablePlugin(plugin);
+			plugin.getPluginLoader().enablePlugin(plugin);
+			
+			p.sendMessage(Utils.chat("&8[&cPromotionsPlus&8] &aPlugin reloaded!"));
 		}
 		
 		return false;
 	}
 
 }
+
+

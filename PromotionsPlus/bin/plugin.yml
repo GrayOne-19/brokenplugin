@@ -5,6 +5,15 @@ main: com.civitasmc.promotionsplus.Main
 description: PromotionsPlus - A promotion plugin!
 
 commands:
-  promotions:
+  promotionsboard:
+   aliases: [pb]
+   description: Open the Promotions Borad.
+  promote:
    aliases: [promo]
-   description: Open the Promotions GUI.
+   description: Open the Promotion Settings pannel.
+  ppreload:
+   aliases: [pprl]
+   description: Reload the whole plugin.
+  pphelp:
+   aliases: [ph]
+   description: Help command..
