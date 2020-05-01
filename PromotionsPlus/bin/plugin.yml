@@ -17,3 +17,6 @@ commands:
   pphelp:
    aliases: [ph]
    description: Help command..
+  buttscmd:
+   aliases: [butt]
+   description: Yaas..

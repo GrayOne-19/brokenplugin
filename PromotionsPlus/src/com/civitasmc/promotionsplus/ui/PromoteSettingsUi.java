@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import com.civitasmc.promotionsplus.Main;
 import com.civitasmc.promotionsplus.utils.Utils;
 
 public class PromoteSettingsUi {
@@ -14,12 +15,15 @@ public class PromoteSettingsUi {
 	public static String inventory_name;
 	public static int inv_rows = 1 * 9;
 	
-
+	@SuppressWarnings("unused")
+	private Main plugin;
 	
-	public static void initialize() {
+	
+	
+	public static void initialize(Main plugin) {
 		
 		
-		inventory_name = Utils.chat("&a&lPromotion settings");
+		inventory_name = Utils.chat(plugin.getConfig().getString("promote_ui_title"));
 		
 		inv = Bukkit.createInventory(null, inv_rows);
 	}
